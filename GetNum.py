@@ -1,23 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-#site usedto find number info
-url = 'https://441il.com/'
-#file with numbers to put in site
-file = open(r"C:\Users\Alon1000\Desktop\numbers.txt", "r")
-#read each numbner
-num1= file.readline()
-num2= file.readline()
-file.close()
 
-#input number
-#file with numbers to put in site
-file = open(r"C:\Users\Alon1000\Desktop\numbers.txt", "r")
-#read each numbner
-num1= file.readline()
-num2= file.readline()
-#close file
-file.close()
 
 #function for finding number info in the site
 def numInfo(url,num1):
@@ -42,7 +26,16 @@ def numInfo(url,num1):
         print("phone=", value.text)
     driver.quit()
 
-
+#site used to find number info
+url = 'https://441il.com/'
+#input number
+#file with numbers to put in site
+file = open(r"C:\Users\Alon1000\Desktop\numbers.txt", "r")
+#read each numbner
+num1= file.readline()
+num2= file.readline()
+#close file
+file.close()
 print("Results for the first number in the document:")
 numInfo(url,num1)
 print("Results for the seconed number in the document:")
